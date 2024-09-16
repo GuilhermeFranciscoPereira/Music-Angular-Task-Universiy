@@ -1,6 +1,6 @@
 # Desafio Angular - Listador de músicas! 🌟
 
-### Commit: 14/09/2024 - 18:12 (Criação da primeira versão da tabela de músicas)
+### Commit: 16/09/2024 - 08:15 (Gerar a tabela de forma dinâmica com base no array de músicas que está em: "MusicTableComponent")
 
 #
 
@@ -10,21 +10,28 @@
 
 # 
 
+## 🖥️ Como o site está no momento atual no computador:
+!['Site atual no computador'](src/assets/musicTablePhoto-PC.png)
+## 📱 Como o site está no momento atual no celular:
+!['Site atual no celular'](src/assets/musicTablePhoto-Mobile.png)
+
 ## ✔️ Alterações deste commit:
 
-## Alterações na pasta: ( src )
+## Alterações na pasta: ( src / assets)
 
-## Alterações nas pastas de ( src ): ( app / styles.css )
+## Alterações nas pastas de ( src ): ( musics-table )
 
 ### app:
-- app > musics-table: Criado o novo componente ( musics-table) que é onde temos nossa tabela e toda sua estrutura, contendo estilização e marcação em html!
+- app > musics-table > musics-table.component.html: Removido as músicas inseridas de forma manual na tabela para trocar por uma forma dinâmica (Itens estão em musics-table.component.ts). Fazendo a iteração usando:
+``` bash
+*ngFor="let music of musics"
+```
 
-- app > app.component.html: Adicionado o component da lista ao app.component, fazendo a renderização da lista no site.
+- app > musics-table > musics-table.component.ts: Adicionado a tipagem dos itens da tabela de músicas e criado o Array para que não precise adicionar de forma manual na tabela.
 
-- ap > app.module.ts: Acionado a declaração do componente de tabela de músicas.
+## Alterações nas pastas de ( assets ):
 
-### styles.css:
-- styles.css: Adicionado as estilização globais do site, como por exemplo zerar o margin e o padding e adicionado a cor de fundo do site.
+- assets: Adicionado as duas fotos que foram usadas neste commit para mostrar como o site está no momento atual.
 
 ##
 

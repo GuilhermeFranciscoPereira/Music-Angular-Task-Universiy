@@ -12,19 +12,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th>Costa Gold - N.A.D.A.B.O.M pt. 2</th>
-                <td>155</td>
-                <td>4:15</td>
-                <td>Costa Gold - feat: Luccas Carlos e Don L</td>
-                <td>Rap</td>
-            </tr>
-            <tr>
-                <th>SAMEHADA</th>
-                <td>Samehada - Single</td>
-                <td>3:13</td>
-                <td>7 Minutoz - Gabriel Rodrigues e Lucas A.R.T. [Prod. tunnA Beatz]</td>
-                <td>Rap Geek</td>
+            <tr *ngFor="let music of musics">
+                <th>{{music.title}}</th>
+                <td>{{music.album}}</td>
+                <td>{{music.duration}}</td>
+                <td>{{music.artistOrBand}}</td>
+                <td>{{music.genre}}</td>
             </tr>
         </tbody>
     </table>
