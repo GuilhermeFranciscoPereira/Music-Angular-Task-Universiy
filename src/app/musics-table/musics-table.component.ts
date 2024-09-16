@@ -13,7 +13,6 @@ export class MusicsTableComponent implements OnInit {
 
   constructor(private service: getMusicsService){};
 
-  
   ngOnInit(): void {
     this.loadMusics();
   }
@@ -23,5 +22,11 @@ export class MusicsTableComponent implements OnInit {
     this.service.getMusics().subscribe({
       next: data => this.musics = data  
     });
+  }
+
+  delete(music: MusicsTableProps) {
+    this.service.delete(music).subscribe({
+      next: () => this.loadMusics()
+    })
   }
 }

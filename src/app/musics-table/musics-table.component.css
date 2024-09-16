@@ -65,7 +65,8 @@ section#musicsTableSection > table > tbody > tr > th, td {
 
 @media (max-width: 480px) {
     section#musicsTableSection {
-        padding: 15px;
+        padding: 0px;
+        border-radius: 10px;
     }
     
     section#musicsTableSection > hr {

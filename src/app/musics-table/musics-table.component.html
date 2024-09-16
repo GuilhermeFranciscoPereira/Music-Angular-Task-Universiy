@@ -9,6 +9,7 @@
                 <th>Duração</th>
                 <th>Artista/Banda</th>
                 <th>Gênero</th>
+                <th>Opções</th>
             </tr>
         </thead>
         <tbody>
@@ -18,6 +19,7 @@
                 <td>{{music.duration}}</td>
                 <td>{{music.artistOrBand}}</td>
                 <td>{{music.genre}}</td>
+                <td><app-button-delete (click)="delete(music)"></app-button-delete></td>
             </tr>
         </tbody>
     </table>

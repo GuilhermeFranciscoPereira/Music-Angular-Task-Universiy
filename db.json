@@ -1,6 +1,7 @@
 {
   "musics": [
     {
+      "id": 1,
       "title": "Costa Gold - N.A.D.A.B.O.M pt. 2",
       "album": "155",
       "duration": "4:15",
@@ -8,6 +9,7 @@
       "genre": "Rap"
     },
     {
+      "id": 2,
       "title": "SAMEHADA",
       "album": "Samehada - Single",
       "duration": "3:13",
@@ -15,6 +17,7 @@
       "genre": "Rap Geek"
     },
     {
+      "id": 3,
       "title": "VAMO DE PAGODIN",
       "album": "Vamo de Pagodin - Single",
       "duration": "2:44",
@@ -22,6 +25,7 @@
       "genre": "Funk"
     },
     {
+      "id": 4,
       "title": "Rei do gado",
       "album": "Rei do gado - Single",
       "duration": "2:58",

@@ -1,6 +1,6 @@
 # Desafio Angular - Listador de músicas! 🌟
 
-### Commit: 16/09/2024 - 10:21 (Criado o nosso "back-end falso" usando o json-server para nossas músicas e caso aconteça algum erro ao fazer a requisição get (Caso a pessoa não tenha colocado o programa no computador ou se estiver no celular) ele irá mostrar o valor padrão (os mesmos dados do json-server))
+### Commit: 16/09/2024 - 12:01 (Criado o novo componente, um componente chamado button-delete. Ele é responsável por apagar as músicas que o usuário escolher)
 
 #
 
@@ -17,23 +17,31 @@
 
 ## ✔️ Alterações deste commit:
 
-## Alterações na pasta: ( src / db.json)
+## Alterações na pasta: ( src / db.json )
 
-## Alterações nas pastas de ( src ): ( app / services / types )
+## Alterações nas pastas de ( src ): ( app / assets / components / services / types )
 
 ### app:
-- app > musics-table > musics.table-component.spec.ts: Arquivo criado neste commit para fazer um teste básico para garantir que o MusicsTableComponent seja instanciado corretamente.
+- app > musics-table > musics.table-component.css: Pequena alteração na estilização quando está com o width de 480px para menos. (celulares)
 
-- app > musics-table > musics-table.component.ts: adicionamos o código necessário para que ao iniciar o site, pegue os nossos produtos no back-end e retorne para o array para assim mostrar na tabela. (caso ocorra um erro na requisição ao json-server retorna um valor default).
+- app > musics-table > musics.table-component.html: Adicionado o campo "opções" que possui o botão de deletar.
 
-- app > app.module.ts: Adicionado a importação do HttpClientModule.
+- app > musics-table > musics-table.component.ts: Adicionado a função "delete".
 
-- services > getMusics.service.ts: É onde está o código responsável por fazer a requisição ao back-end e retornar os dados. Como já dito anteriormente, caso não exista os dados ele irá retornar um valor default.
+- app > app.module.ts: Adicionado a declaração do ButtonDeleteComponent.
 
-- types > musicsTableProps.ts: Exporta a tipagem da tabela de músicas.
+- assets: Adicionado as duas novas fotos de como está o site no atual momento com os botões de delete (fotos para usar neste readme).
+
+- components: Criado a pasta components e dentro a pasta button-delete.
+
+- components > button-delete: Criado o componente do botão de deletar, junto da sua estilização.
+
+- services > getMusics.service.ts: Adicionado a função "delete" e também o alerta de que se o usuário estiver usando a versão do navegador não será possível usar o botão de deletar. Além de também ter adicionado os IDs nos valores defaults.
+
+- types > musicsTableProps.ts: Adicionado o ID como tipagem da tabela de músicas.
 
 ## Alterações no arquivo de ( db.json ):
-- db.json: Criado o nosso back-end falso usando o json-server e adicionando neste arquivo os nossos dados de músicas.
+- db.json: Adicionado o ID em casa objeto. Pois o Json-server faz o delete com o ID - (Informação encontrada na documentação do Json-Server no NPM. Link da documentação: https://www.npmjs.com/package/json-server)
 
 ##
 
