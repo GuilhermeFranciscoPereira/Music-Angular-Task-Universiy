@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MusicsTableProps } from '../../types/musicsTableProps';
-import { getMusicsService } from '../../services/getMusics.service';
+import { musicsService } from '../../services/musics.service';
 
 @Component({
   selector: 'app-musics-table',
@@ -11,13 +11,13 @@ import { getMusicsService } from '../../services/getMusics.service';
 export class MusicsTableComponent implements OnInit {
   musics: Array<MusicsTableProps> = [];
 
-  constructor(private service: getMusicsService){};
+  constructor(private service: musicsService){};
 
   ngOnInit(): void {
     this.loadMusics();
   }
 
-  // Save the datas (musics) from the back-end to the musics array, if don`t exist the back-end, shows default values. Please, read the comment on top of the service (getMusics.service.ts)
+  // Save the datas (musics) from the back-end to the musics array, if don`t exist the back-end, shows default values. Please, read the comment on top of the service (musics.service.ts)
   loadMusics() {
     this.service.getMusics().subscribe({
       next: data => this.musics = data  

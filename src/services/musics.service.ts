@@ -8,7 +8,7 @@ import { MusicsTableProps } from '../types/musicsTableProps';
 })
 
 // This service get the musics from the back-end (json-server in this case). But, if the get return a error, this service will return a default values ( This is good for don`t need install this application on the user Computer, and to use on mobile phone too)
-export class getMusicsService {
+export class musicsService {
   constructor(private http:HttpClient) { }
 
   getMusics(): Observable<Array<MusicsTableProps>> {
